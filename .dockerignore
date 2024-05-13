@@ -1,0 +1,13 @@
+# we don't need it for now as we're copying files explicitly, but it might be needed later
+# Go temporary files
+*.o
+*.out
+*.exe
+*.test
+
+# Git files
+.git
+.gitignore
+
+# Other stuff
+.DS_Store
