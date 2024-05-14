@@ -7,7 +7,7 @@ COPY go.mod main.go ./
 
 RUN go mod download
 
-RUN go build CGO_ENABLED=0 -o /hello
+RUN go build -o /hello
 
 # run stage
 FROM alpine:latest AS runner
