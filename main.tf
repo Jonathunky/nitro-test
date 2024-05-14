@@ -76,3 +76,7 @@ resource "aws_eks_node_group" "my_node_group" {
     min_size     = 2
   }
 }
+
+resource "aws_ecr_repository" "my_repository" {
+  name = "DefaultRepo"
+}

@@ -27,5 +27,5 @@ jobs:
 
       - name: Build and push Docker image to ECR
         run: |
-          docker build -t 477724139621.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/nitro-test:latest .
-          docker push 477724139621.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/nitro-test:latest
+          docker build -t 477724139621.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/DefaultRepo:latest .
+          docker push 477724139621.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/DefaultRepo:latest
