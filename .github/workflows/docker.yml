@@ -1,8 +1,8 @@
-name: Docker Build and Push
+name: 2. Docker Build and Push
 
 on:
   workflow_run:
-    workflows: ["Terraform Deployment"]
+    workflows: ["1. Terraform Deployment"]
     types:
       - completed
 
