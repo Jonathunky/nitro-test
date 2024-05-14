@@ -1,0 +1,14 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Terraform deployment
+        uses: ./.github/workflows/terraform.yml
