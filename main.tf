@@ -69,14 +69,10 @@ resource "aws_eks_node_group" "my_node_group" {
   subnet_ids      = module.subnet.subnet_ids
   ami_type        = "AL2_ARM_64"   # otherwise defaults to x86_64
   instance_types  = ["m7g.medium"] # smallest Gravitron 3 instance
-  capacity_type   = "ON_DEMAND"    # money could be saved with Spot 
+  capacity_type   = "ON_DEMAND"    # money could be saved with Spot
   scaling_config {
     desired_size = 2
     max_size     = 4
     min_size     = 2
   }
-}
-
-resource "aws_ecr_repository" "my_repository" {
-  name = "DefaultRepo"
 }
