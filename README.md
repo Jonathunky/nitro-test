@@ -1,5 +1,5 @@
-# Nitrous Oxide Solution
+# Nitrous Oxide Solutions
 
-This repository contains the solution for the test task at Nitro Software.
+This repository contains the solution for the test exercise at Nitro Software.
 
-It's work in progress at the moment.
+It's done now (: and it’s waiting for assessment!
