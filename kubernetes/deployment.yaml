@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-nitro
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-nitro
+  template:
+    metadata:
+      labels:
+        app: hello-nitro
+    spec:
+      containers:
+        - name: hello-nitro
+          image: hello-nitro:dev
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: 100m
+            requests:
+              cpu: 50m

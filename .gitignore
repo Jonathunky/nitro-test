@@ -1,5 +1,6 @@
-# binary
+# Others
 nitro-test
+.DS_Store
 
 # Go
 *.exe
@@ -13,6 +14,7 @@ go.work
 go.work.sum
 
 # Terraform
+.terraform
 **/.terraform/*
 *.tfstate
 *.tfstate.*

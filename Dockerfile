@@ -16,6 +16,6 @@ WORKDIR /app
 
 COPY --from=builder /hello /app/hello
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["./hello"]
