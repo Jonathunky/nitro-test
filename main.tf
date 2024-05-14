@@ -54,7 +54,7 @@ resource "aws_security_group" "eks_cluster_sg" {
 resource "aws_eks_cluster" "my_cluster" {
   name     = "DefaultCluster"
   role_arn = module.iam.eks_cluster_role_arn
-  version  = "1.29" # 1.30 is not supported on EKS
+  version  = "1.29" # 1.30 is not supported on EKS...
 
   vpc_config {
     subnet_ids         = module.subnet.subnet_ids
@@ -67,7 +67,7 @@ resource "aws_eks_node_group" "my_node_group" {
   node_group_name = "DefaultNodeGroup"
   node_role_arn   = module.iam.eks_node_role_arn
   subnet_ids      = module.subnet.subnet_ids
-  ami_type        = "AL2_ARM_64"   # otherwise default to x86_64
+  ami_type        = "AL2_ARM_64"   # otherwise defaults to x86_64
   instance_types  = ["m7g.medium"] # smallest Gravitron 3 instance
   capacity_type   = "ON_DEMAND"    # money could be saved with Spot 
   scaling_config {
@@ -75,4 +75,8 @@ resource "aws_eks_node_group" "my_node_group" {
     max_size     = 4
     min_size     = 2
   }
+}
+
+resource "aws_ecr_repository" "my_repository" {
+  name = "DefaultRepo"
 }
